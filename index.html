@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Royal Beauty Collection</title>
+
+<link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+background: radial-gradient(circle at top,#140a14,#07070c 70%);
+color:#fff;
+overflow-x:hidden;
+line-height:1.6;
+}
+
+/* TEXTURE */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:url('https://www.transparenttextures.com/patterns/dark-leather.png');
+opacity:0.04;
+pointer-events:none;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(16px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo{
+font-size:18px;
+font-weight:900;
+letter-spacing:3px;
+background:linear-gradient(90deg,#f9a8d4,#facc15);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+margin-left:18px;
+opacity:0.7;
+font-weight:500;
+transition:0.3s;
+font-size:14px;
+}
+
+nav a:hover{
+opacity:1;
+color:#facc15;
+}
+
+/* HERO */
+.hero{
+padding:110px 40px;
+max-width:900px;
+margin:auto;
+text-align:left;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.05;
+font-weight:900;
+}
+
+.hero span{
+background:linear-gradient(90deg,#f9a8d4,#facc15);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+margin-top:18px;
+opacity:0.75;
+font-size:16px;
+max-width:650px;
+}
+
+.btn{
+display:inline-block;
+margin-top:28px;
+padding:14px 26px;
+border-radius:12px;
+background:#facc15;
+color:#000;
+font-weight:700;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+opacity:0.9;
+}
+
+/* SECTIONS */
+.section{
+padding:80px 40px;
+max-width:1100px;
+margin:auto;
+}
+
+.section h2{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.subtitle{
+opacity:0.7;
+margin-bottom:25px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+}
+
+/* CARD PREMIUM */
+.card{
+background:linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+border:1px solid rgba(250,204,21,0.12);
+border-radius:18px;
+padding:18px;
+transition:0.4s;
+box-shadow:0 10px 40px rgba(0,0,0,0.4);
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 25px 70px rgba(250,204,21,0.12);
+}
+
+/* IMAGE PREMIUM FIX */
+.card-img{
+width:100%;
+max-width:220px;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:16px;
+margin:0 auto 14px;
+display:block;
+box-shadow:0 18px 45px rgba(0,0,0,0.25);
+transition:0.4s;
+}
+
+.card-img:hover{
+transform:scale(1.03);
+box-shadow:0 28px 70px rgba(0,0,0,0.35);
+}
+
+/* BADGE */
+.badge{
+display:inline-block;
+padding:4px 10px;
+border-radius:20px;
+font-size:11px;
+background:rgba(250,204,21,0.15);
+color:#facc15;
+margin-bottom:8px;
+}
+
+/* TITRE CARD */
+.card h3{
+color:#f9a8d4;
+margin:8px 0;
+font-size:18px;
+}
+
+/* STORY */
+.story{
+text-align:center;
+max-width:800px;
+margin:auto;
+opacity:0.85;
+}
+
+/* STATS */
+.stats{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:25px;
+}
+
+.stat h3{
+font-size:24px;
+color:#facc15;
+margin:0;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:18px;
+}
+
+.quote{
+background:rgba(255,255,255,0.04);
+padding:18px;
+border-radius:14px;
+border:1px solid rgba(255,255,255,0.08);
+opacity:0.85;
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn2, .btn1{
+padding:14px 22px;
+border-radius:12px;
+font-weight:700;
+}
+
+.btn2{
+background:#facc15;
+color:#000;
+}
+
+.btn1{
+border:1px solid #facc15;
+color:#facc15;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+opacity:0.5;
+border-top:1px solid rgba(255,255,255,0.05);
+margin-top:40px;
+font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">ROYAL BEAUTY</div>
+<nav>
+<a href="#custom-box">Box sur-mesure</a>
+<a href="#avis">Avis</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Royal Beauty Collection<br>
+<span>La beauté comme un rituel de luxe</span></h1>
+
+<p>
+Des box premium conçues comme des expériences haut de gamme.
+Chaque coffret transforme votre routine en moment royal :
+parfum signature, soins sélectionnés et élégance absolue.
+</p>
+
+<a href="#box" class="btn">Découvrir</a>
+</section>
+
+<section class="section" id="box">
+
+<section class="section">
+<h2>Pourquoi Royal Beauty ?</h2>
+<p class="subtitle">Une expérience inspirée des hôtels 5★ et du luxe parisien</p>
+
+<div class="story">
+Nous ne vendons pas des produits.
+Nous créons des rituels de beauté.
+Chaque box est pensée pour offrir une sensation de prestige, de confort et de confiance immédiate.
+</div>
+
+<div class="stats">
+<div class="stat">
+<h3>+300</h3>
+<p>Box livrées</p>
+</div>
+<div class="stat">
+<h3>5★</h3>
+<p>Expérience client</p>
+</div>
+<div class="stat">
+<h3>24h</h3>
+<p>Réponse rapide</p>
+</div>
+</div>
+</section>
+
+<h2>Nos Box Premium</h2>
+<p class="subtitle">Coffrets homme & femme</p>
+
+<div class="grid">
+
+<div class="card">
+<img src="box-homme.png" class="card-img">
+<span class="badge">Homme</span>
+<h3>Royal Men Box</h3>
+<p>Parfum signature + gel douche premium + déodorant longue tenue +
+serviette hôtel + soin complet.</p>
+</div>
+
+<div class="card">
+<img src="box-femme.png" class="card-img">
+<span class="badge">Femme</span>
+<h3>Royal Women Box</h3>
+<p>Soin visage + gel douche parfumé + accessoires beauté +
+hydratation + rituel douceur luxe.</p>
+</div>
+
+<div class="card">
+<span class="badge">Hair</span>
+<h3>Royal Hair Box</h3>
+<p>Huile croissance + masque capillaire + bonnet satin + brosse premium + sérum réparation.</p>
+</div>
+
+<div class="card">
+<span class="badge">Luxury</span>
+<h3>Wig Box</h3>
+<p>Perruque premium + colle fixation + bonnet wig cap + brosse + spray entretien professionnel.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="custom-box">
+
+<h2>Créer ta Box Unique 👑</h2>
+<p class="subtitle">Une box 100% personnalisée selon tes envies</p>
+
+<div class="card" style="text-align:left; max-width:700px; margin:auto;">
+
+<p>
+Tu ne trouves pas exactement ce que tu veux ?
+On te crée une box sur-mesure adaptée à ton style, ton budget et tes besoins.
+</p>
+
+<ul style="opacity:0.85; line-height:1.8;">
+<li>✨ Choix des produits (parfum, soin, cheveux, etc.)</li>
+<li>💎 Budget personnalisé</li>
+<li>🎁 Idée cadeau spéciale</li>
+<li>👑 Box luxe entièrement sur demande</li>
+</ul>
+
+<p style="margin-top:15px;">
+Réponds à quelques questions et on te prépare une box unique.
+</p>
+
+<div class="buttons" style="margin-top:20px;">
+<a href="https://wa.me/33761066199?text=Bonjour%2C%20je%20veux%20créer%20une%20box%20personnalisée" class="btn2">
+Créer ma box
+</a>
+
+<a href="mailto:Saul.vedesca97@gmail.com?subject=Box%20personnalisée" class="btn1">
+Demander par email
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- HISTOIRE -->
+<section class="section text" id="histoire">
+<h2>👑 L’univers Royal Beauty</h2>
+<p>
+Royal Beauty Collection est née d’une idée simple : offrir une expérience de beauté haut de gamme accessible,
+entre la France et les îles. Chaque box est pensée comme un rituel de soin, mêlant élégance, fraîcheur et prestige.
+</p>
+</section>
+
+<section class="section" id="avis">
+<h2>Avis clients</h2>
+<p class="subtitle">Ce que disent nos clientes et clients</p>
+
+<div class="testimonials">
+
+<div class="quote">
+“Franchement niveau packaging et qualité j’ai jamais vu ça à ce prix. Très propre.”
+</div>
+
+<div class="quote">
+“On dirait une box de luxe, j’ai été choquée du rendu.”
+</div>
+
+<div class="quote">
+“Livraison rapide + produits très quali, je recommande.”
+</div>
+
+</div>
+</section>
+
+<section class="section contact" id="contact">
+<h2>Commande & Contact</h2>
+<p class="subtitle">Réponse rapide via WhatsApp ou email</p>
+
+<div class="buttons">
+
+<a href="https://wa.me/33761066199" class="btn2">
+Commander sur WhatsApp
+</a>
+
+<a href="mailto:Saul.vedesca97@gmail.com" class="btn1">
+Recevoir les instructions
+</a>
+
+</div>
+</section>
+
+<footer>
+© Royal Beauty Collection — Beauté premium entre Paris et les îles
+</footer>
+
+</body>
+</html>
